@@ -1,0 +1,38 @@
+//Crear divs
+function registrada(nombre,apellido,correo,psw) {
+  this.name = nombre;
+  this.lastname = apellido;
+  this.email = correo;
+  this.psw = psw;
+
+  this.card = function (){
+    var n = this.name;
+    var a = this.lastname;
+    var e = this.age;
+    var p = this.country;
+    return "<div class='un-paciente'>Nombre: " + n + "<br>" + "Apellido: " + a + "<br>" + "Correo: " + e + "<br>" + "Contraseña: " + p + "<p></div";
+  }
+}
+ //cargar pagina
+window.onload=function(){
+  var envia = document.getElementById('enviar');
+
+  envia.addEventListener('click',function(){
+    // alert("Ingresa bien pues");
+    var name = document.getElementById("nombre");
+    var lastname = document.getElementById("apellido");
+    var email = document.getElementById("correo");
+    var psw = document.getElementById("psw");
+
+    if (name.value == "" || lastname.value == "" || email.value == "" || psw.value == ""){
+      alert("Estos Datos son obligatorios \n Nombre \n apellido \n correo \n password");
+    }
+    else{
+      var registro = new registrada(name.value,lastname.value,email.value,psw.value);
+      console.log(registro);
+      localStorage.setItem("newRegistro",JSON.stringify(registro));
+      window.location="perfil.html";
+      document.getElementById("formulario").reset();
+    }
+  });
+}
