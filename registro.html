@@ -9,22 +9,22 @@
 <body>
   <h1>Registrar Usuario</h1>
   <!-- action="perfil.html" -->
-  <form class="formulario" method="post">
-    <label for="">Nombre: </label>
-    <input type="text" id="nombre" required><br>
-    <span></span>
-    <label for="">Apellido: </label>
-    <input type="text" id="apellido" required><br>
-    <span></span>
-    <label for="">Correo: </label>
-    <input type="email" id="correo" required><br>
-    <span></span>
-    <label for="">Contraseña: </label>
-    <input type="password" id="psw" required><br>
-    <span></span>
+  <form id="formulario">
+    <label for="name">Nombre: </label>
+    <input type="text" id="nombre" class="input-registro"placeholder="Ingresa tu nombre"><br>
+    <span></span><br>
+    <label for="apellido">Apellido: </label>
+    <input type="text" id="apellido" class="input-registro"placeholder="Ingresa tu apellido"><br>
+    <span></span><br>
+    <label for="correo">Correo: </label>
+    <input type="email" id="correo" class="input-registro"placeholder="Ingresa tu correo"><br>
+    <span></span><br>
+    <label for="password">Contraseña: </label>
+    <input type="password" id="psw" class="input-registro"placeholder="Ingresa tu contraseña"><br>
+    <span></span><br>
     <button id="enviar">Registrar</button>
-    <p></p>
   </form>
+  <br>
   <div id= "msj"> </div>
   <script type="text/javascript" src="js\registro.js"></script>
 </body>
